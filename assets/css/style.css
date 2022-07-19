@@ -1,0 +1,458 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+}
+
+#main{
+    width: 100%;
+    height: 100vw;
+    background-color:#fff;
+}
+
+#header{
+    height: 46px;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+#nav{
+    display: inline-block;
+}
+
+#nav > li{
+    display: inline-block;
+}
+
+#nav li{
+    position: relative;
+    cursor: pointer;
+}
+
+#nav .arrow-down{
+    padding-left: 6px;
+}
+
+#nav .subnav{
+    list-style: none;
+    position: absolute;
+    top: 100%;
+    background-color: white;
+    border-radius: 2px;
+    min-width: 160px;
+    display: none;
+}
+
+#nav .subnav a{
+    color: black;
+    padding: 0 12px;
+    line-height: 38px;
+}
+
+#nav>li>a{
+    color: white;
+}
+
+#nav li a{
+    text-decoration: none;
+    line-height: 46px;
+    padding: 0 24px;
+    display: block;
+}
+
+#nav>li:hover>a,
+#nav .subnav li:hover a{
+    color: black;
+    background-color: #ccc;
+}
+
+#nav li:hover .subnav{
+    display: block;
+}
+
+#header .search{
+    float: right;
+    padding: 10px 21px;
+    cursor: pointer;
+}
+
+#header .search:hover{
+    background-color: red;
+}
+
+#header .search i{
+    color: #ccc;
+}
+
+#slider{
+    position: relative;
+    margin-top: 46px;
+    background: url('../img/slider/slider1.jpg') top center / cover no-repeat;
+    padding-top: 50%;
+}
+
+#slider .text-content{
+    position: absolute;
+    bottom: 47px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: #fff;
+    text-shadow: 0 0 10px #000;
+}
+
+#slider .text-heading{
+    font-size: 25px;
+}
+
+#slider .text-description{
+    font-size: 15px;
+    padding-top: 20px;
+}
+
+.about, .tour-date{
+    width: 100%;
+    height: auto;
+    background-color: #fff;
+    margin-top: 5rem;
+}
+
+.about h1{
+    letter-spacing: 4px;
+}
+
+.about h1,.about h6, 
+.tour-date .content h1,.tour-date .content h6{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.about p{
+    text-align: justify;
+}
+
+.about .item{
+    list-style: none;
+    margin-top: 3rem;
+}
+
+.about .item .item-name{
+    padding-left: 6.5rem;
+}
+
+.about .item img{
+    width: 250px;
+    padding: 15px 45px;
+}
+
+.tour-date{
+    background-color: #000;
+}
+
+.tour-date .content h1{
+    color: #fff;
+    font-weight: 500;
+    font-size: 35px;
+    padding-top: 4rem;
+    letter-spacing: 4px;
+}
+
+.tour-date .content h6{
+    color: rgba(204, 204, 204, 0.655);
+    font-style: italic;
+    padding-bottom: 1rem;
+}
+
+.tour-date .content input{
+    width: 750px;
+    height: 40px;
+    padding-left: 15px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    position: relative;
+    outline: none;
+    background-color: #fff;
+}
+
+.tour-date .content span,.tour-date .content p{
+    position: absolute;
+    top: 11.7rem;
+    left: 8rem;
+    color: #fff;
+    border: red;
+    background-color: red;
+    padding: 0px 5px;
+}
+
+.tour-date .content p{
+    position: absolute;
+    top: 14.2rem;
+    left: 6.5rem;
+    color: #fff;
+    border: red;
+    background-color: red;
+    padding: 0px 5px;
+}
+
+.tour-date .content label{
+    position: absolute;
+    top: 16.8rem;
+    right: 1.5rem;
+    color: #fff;
+    border-radius: 50%;
+    background-color: rgb(26, 23, 23);
+    padding: 0px 8px;
+}
+
+.tour-date .item{
+    margin: 2rem 0 8rem 0;
+}
+
+.tour-date .item img{
+    width: 235px;
+}
+
+.tour-date .item img:hover{
+    opacity: 0.5;
+}
+
+.tour-date .item-text{
+    background-color: #fff;
+    width: 235px;
+    padding: 14px 14px;
+}
+
+.tour-date .item-text h4{
+    font-size: 18px;
+}
+
+.tour-date .item-text span{
+    opacity: 0.7;
+}
+
+.tour-date .item-text button{
+    background-color: #000;
+    padding: 5px 15px;
+    color: #fff;
+}
+
+.tour-date .item-text button:hover{
+    background-color: rgba(204, 204, 204, 0.927);
+    color: #000;
+}
+
+.contact-section{
+    padding: 4.5rem 0;
+}
+
+.contact-section .description{
+    text-align: center;
+}
+
+.contact-section h1{
+    font-weight: 500;
+    font-size: 35px;
+    padding-bottom: 1rem;
+    letter-spacing: 4px;
+}
+
+.contact-section .description span{
+    font-style: italic;
+}
+
+.contact-section .left-content{
+    padding-top: 3rem;
+}
+
+.contact-section .left-content i{
+    font-size: 20px;
+}
+
+.contact-section .left-content span{
+    font-size: 18px;
+    padding-left: 10px;
+}
+
+.contact-section .left-content a{
+    text-decoration:underline;
+}
+
+.contact-section .content{
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-section .right-content{
+    padding-top: 3rem;
+}
+
+.contact-section .right-content input{
+    padding: 7px 10px;
+    margin-bottom: 10px;
+    font-size: 15px;
+    outline: none;
+    border: 1px solid #ccc;
+}
+
+.contact-section .right-content input:first-child{
+    margin-right: 10px;
+}
+
+.contact-section .right-content input:last-child{
+    width: 100%;
+}
+
+.contact-section .right-content button{
+    margin-top: 0.5rem;
+    margin-bottom: 3rem;
+    padding: 5px 12px;
+    background-color: #000;
+    border: none;
+    color: #fff;
+    float: right;
+}
+
+.contact-section .right-content button:hover{
+    background-color: #ccc;
+    color: #000;
+}
+
+.map-section img{
+    width: 100%;
+    margin-bottom: 5rem;
+}
+
+.social-section{
+    text-align: center;
+    padding-bottom: 3rem;
+}
+
+.social .social-icons{
+    padding-bottom: 1rem;
+}
+
+.social-section i{
+    font-size: 25px;
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.social-section span{
+    font-size: 17px; 
+}
+
+.social-section i:hover{
+    opacity: 0.3;
+}
+
+.social-section a{
+    color: #000;
+    text-decoration: underline;
+}
+
+.modal.open{
+    display: flex;
+}
+
+.modal{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.container-modal{
+    width: 860px;
+    height: 470px;
+    background-color:#fff;
+    border-radius: 5px;
+    animation: modalFadeIn ease .5s;
+    max-width: calc(100% - 32px);
+}
+
+.modal-header{
+    height: 130px;
+    background-color: #009788;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-header h3{
+    padding-right: 20rem;
+    margin: auto 0;
+    color: #fff;
+    letter-spacing: 5px;
+    font-size: 32px;
+    font-weight: 400;  
+}
+
+.modal-header-icon{
+    padding-left: 20rem;
+    font-size: 32px;
+    color: #fff;
+    margin: auto 0;
+}
+
+.modal-close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #fff;
+    padding: 16px;
+    cursor: pointer;
+}
+
+.modal-close:hover{
+    background-color: rgba(255, 255, 255, 0.587);
+    color: #333;
+}
+
+.modal-input{
+    width: 100%;
+    height: 38px;
+    padding-left: 10px;
+    margin: 12px 0;
+}
+
+.modal-body button{
+    width: 100%;
+    background-color: #009788;
+    color: #fff;
+    height: 50px;
+    margin-top: 15px;
+}
+
+.modal-body button:hover{
+    background-color: #04ab9a;
+}
+
+.modal-footer a{
+    text-decoration: underline;
+}
+
+@keyframes modalFadeIn{
+    from{
+        opacity: 0;
+        transform: translateY(-140px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
